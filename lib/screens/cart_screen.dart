@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../providers/cart_provider.dart';
 import '../widgets/cart_item.dart';
+import '../widgets/cart_summary.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -21,6 +22,10 @@ class CartScreen extends StatelessWidget {
                 ...cartProvider.cartItems.map((cartItem) {
                   return CartItemWidget(cartItem: cartItem);
                 }),
+
+                const SizedBox(height: 8),
+
+                const CartSummary(),
               ],
             ),
     );
